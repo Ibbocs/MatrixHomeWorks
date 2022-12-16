@@ -10,10 +10,10 @@ namespace Interface
             //qeydlerdeki suallar
             //ovtamatik kodlari seliqeli siralamani hansi qisa yolla edirik
             //prop adi boyukle yazilmalidi
-            //bool methoduntrue ve ya false 2sinden birini veziyyete gore geri dondermesini nece eleyek
+            //bool methoduntrue ve ya false 2sinden birini veziyyete gore geri dondermesini nece eleyek = bool adini yaz da
             //task 3de niye interface yaradim e, ele try-catch program clasinda isledib yoxla bilmezdim ki?
             #region Task1
-
+            
             Gun pist = new Gun("Luger");
 
             // test for methods

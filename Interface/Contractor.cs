@@ -10,9 +10,10 @@ namespace Interface
     {
         int workingHours;
 
-        public Contractor(string _name, int _workingHours) : base("Akif")
+        public Contractor(string _name, int _workingHours) : base(_name)
         {
             workingHours = _workingHours;
+            
         }
 
         public override void Calculate()

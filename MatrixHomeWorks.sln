@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33103.184
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interface", "Interface\Interface.csproj", "{66991270-4B09-45CC-BE7F-6748B4B83AF5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interface", "Interface\Interface.csproj", "{66991270-4B09-45CC-BE7F-6748B4B83AF5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataStructur", "DataStructur\DataStructur.csproj", "{EFE963C8-B564-436D-BE33-43CC3B2387B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delegate", "Delegate\Delegate.csproj", "{F87FE23F-0F96-47FC-8B51-9B3AD244EA71}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{66991270-4B09-45CC-BE7F-6748B4B83AF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{66991270-4B09-45CC-BE7F-6748B4B83AF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{66991270-4B09-45CC-BE7F-6748B4B83AF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFE963C8-B564-436D-BE33-43CC3B2387B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFE963C8-B564-436D-BE33-43CC3B2387B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFE963C8-B564-436D-BE33-43CC3B2387B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFE963C8-B564-436D-BE33-43CC3B2387B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F87FE23F-0F96-47FC-8B51-9B3AD244EA71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F87FE23F-0F96-47FC-8B51-9B3AD244EA71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F87FE23F-0F96-47FC-8B51-9B3AD244EA71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F87FE23F-0F96-47FC-8B51-9B3AD244EA71}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
