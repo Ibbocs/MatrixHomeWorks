@@ -14,7 +14,8 @@ namespace Delegate
             //metodlardan basqa hecnede isledilmir delegate?
             //main iicindeki args nedi?
             //OperationDelegate opd = new OperationDelegate(Add); bele nece islede bilerik
-            //delegate moterezesindeki int falan sadece  yaazilis ucundu yoxsa hesablamada isletmek olar/
+            //delegate moterezesindeki int falan sadece  yaazilis ucundu yoxsa hesablamada isletmek olar?
+            //bizimm motereze tapsiriginda (((()))) bu niye duzdu ki? acilib baglanmayanlar var axi
 
             #region Task1
             Console.WriteLine(Applay(4.2F, 3, Add));
@@ -37,6 +38,7 @@ namespace Delegate
             PersonMethod(prs.WriteName);
             #endregion
 
+            #region Task5
             List<string>user= new List<string>();
             user.Add("Qasim Qanixli");
             user.Add("Veli Sebiyev");
@@ -44,7 +46,7 @@ namespace Delegate
             User users = new User();
 
             users.Diger(user);
-
+            #endregion
 
 
         }

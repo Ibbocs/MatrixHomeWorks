@@ -8,6 +8,6 @@ namespace Delegate
 {
     internal class MobilePhone
     {
-        string name, model, year;
+        string name, model, year, prices;
     }
 }
