@@ -38,6 +38,18 @@ namespace Delegate
             PersonMethod(prs.WriteName);
             #endregion
 
+            #region Task4
+            MobilePhone ayfon = new MobilePhone("X", 2, 600);
+            Console.WriteLine($"Info: {ayfon.model}, {ayfon.pathYear}, {ayfon.beginPrices}, {ayfon.nowPrice}");
+
+            ayfon.ChangeProporties(4);
+            ayfon.ChangeProporties("14 Pro Max");
+
+            decimal b = 890;
+            ayfon.ChangeProporties(b);
+
+            Console.WriteLine($"Info 2: {ayfon.model}, {ayfon.pathYear}, {ayfon.beginPrices}, {ayfon.nowPrice}");
+            #endregion
             #region Task5
             List<string>user= new List<string>();
             user.Add("Qasim Qanixli");
