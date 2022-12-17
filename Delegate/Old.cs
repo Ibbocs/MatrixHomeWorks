@@ -10,7 +10,7 @@ namespace Delegate
     {
         int PriceDownValue = 35;
 
-        //MobilePhone mp = new MobilePhone();
+        
 
         public int PriceDownCalculation(int _pathYear)
         {
