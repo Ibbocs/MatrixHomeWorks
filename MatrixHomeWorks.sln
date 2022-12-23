@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interface", "Interface\Inte
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataStructur", "DataStructur\DataStructur.csproj", "{EFE963C8-B564-436D-BE33-43CC3B2387B9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delegate", "Delegate\Delegate.csproj", "{F87FE23F-0F96-47FC-8B51-9B3AD244EA71}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Delegate", "Delegate\Delegate.csproj", "{F87FE23F-0F96-47FC-8B51-9B3AD244EA71}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncAwait", "AsyncAwait\AsyncAwait.csproj", "{5D953CEC-D1D5-4DDF-AC78-7ABC2B031938}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{F87FE23F-0F96-47FC-8B51-9B3AD244EA71}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F87FE23F-0F96-47FC-8B51-9B3AD244EA71}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F87FE23F-0F96-47FC-8B51-9B3AD244EA71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D953CEC-D1D5-4DDF-AC78-7ABC2B031938}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D953CEC-D1D5-4DDF-AC78-7ABC2B031938}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D953CEC-D1D5-4DDF-AC78-7ABC2B031938}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D953CEC-D1D5-4DDF-AC78-7ABC2B031938}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
