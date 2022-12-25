@@ -7,8 +7,8 @@ namespace ClassLibrary
     {
         static void Main(string[] args)
         {
-            MyMath myMath = new MyMath();
-            Console.WriteLine(myMath.AddNumber(1, 2, 3, 4));
+            MyMath usingLib = new MyMath();
+            Console.WriteLine(usingLib.AddNumber(1, 2, 3, 4));
             
 
             
