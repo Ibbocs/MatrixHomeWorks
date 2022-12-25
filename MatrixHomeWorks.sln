@@ -9,7 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataStructur", "DataStructu
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Delegate", "Delegate\Delegate.csproj", "{F87FE23F-0F96-47FC-8B51-9B3AD244EA71}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncAwait", "AsyncAwait\AsyncAwait.csproj", "{5D953CEC-D1D5-4DDF-AC78-7ABC2B031938}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsyncAwait", "AsyncAwait\AsyncAwait.csproj", "{5D953CEC-D1D5-4DDF-AC78-7ABC2B031938}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary", "ClassLibrary\ClassLibrary.csproj", "{A9B7227F-7116-4155-9509-C2AD4F30AB8E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathLibrary", "MathLibrary\MathLibrary.csproj", "{FEB34AE8-94FC-483D-B547-B75ABCE54810}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{5D953CEC-D1D5-4DDF-AC78-7ABC2B031938}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D953CEC-D1D5-4DDF-AC78-7ABC2B031938}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D953CEC-D1D5-4DDF-AC78-7ABC2B031938}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9B7227F-7116-4155-9509-C2AD4F30AB8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9B7227F-7116-4155-9509-C2AD4F30AB8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9B7227F-7116-4155-9509-C2AD4F30AB8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9B7227F-7116-4155-9509-C2AD4F30AB8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEB34AE8-94FC-483D-B547-B75ABCE54810}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEB34AE8-94FC-483D-B547-B75ABCE54810}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEB34AE8-94FC-483D-B547-B75ABCE54810}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEB34AE8-94FC-483D-B547-B75ABCE54810}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

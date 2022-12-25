@@ -9,5 +9,7 @@ namespace Interface
     internal interface ILogger
     {
         abstract void LogInformation();
+        public int MyProperty { get; set; }
+
     }
 }

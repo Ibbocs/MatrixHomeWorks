@@ -39,15 +39,15 @@ namespace AsyncAwait
             //Console.WriteLine(task.Result);
 
         }
+        
 
         static async Task< int> MethodAAsync()
         {
             for (int i = 0; i < 5; i++)
             {
                 Console.WriteLine($" A{i}");
-
                 await Task.Delay(500);
-                
+
             }
             //var res = await MethodBAsync();
 

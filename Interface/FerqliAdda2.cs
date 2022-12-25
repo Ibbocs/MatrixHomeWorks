@@ -8,6 +8,8 @@ namespace Interface
 {
     internal class FerqliAdda2 : ILogger
     {
+        public int MyProperty { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
         public void LogInformation()
         {
             try
