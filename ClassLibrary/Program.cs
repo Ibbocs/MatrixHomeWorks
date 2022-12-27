@@ -3,14 +3,15 @@ using MathLibrary;
 
 namespace ClassLibrary
 {
-    internal class Program:MyMath
+    internal class Program
     {
         static void Main(string[] args)
         {
-           // MyMath usingLib = new MyMath();
+            //MyMath usingLib = new MyMath();
+            //Console.WriteLine(usingLib.AddNumber(1, 2, 3, 4));
+
             Console.WriteLine(MyMath.AddNumber(1, 2, 3, 4));
 
-           Console.WriteLine( Math.Sqrt(16));
             
         }
     }
