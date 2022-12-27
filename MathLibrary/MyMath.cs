@@ -4,7 +4,7 @@ namespace MathLibrary
 {
     public class MyMath
     {
-        public int AddNumber(params int[] num) 
+        public static int AddNumber(params int[] num) 
         {
             int result = 0;
 
