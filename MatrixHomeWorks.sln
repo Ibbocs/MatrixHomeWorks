@@ -11,9 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Delegate", "Delegate\Delega
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsyncAwait", "AsyncAwait\AsyncAwait.csproj", "{5D953CEC-D1D5-4DDF-AC78-7ABC2B031938}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary", "ClassLibrary\ClassLibrary.csproj", "{A9B7227F-7116-4155-9509-C2AD4F30AB8E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassLibrary", "ClassLibrary\ClassLibrary.csproj", "{A9B7227F-7116-4155-9509-C2AD4F30AB8E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathLibrary", "MathLibrary\MathLibrary.csproj", "{FEB34AE8-94FC-483D-B547-B75ABCE54810}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MathLibrary", "MathLibrary\MathLibrary.csproj", "{FEB34AE8-94FC-483D-B547-B75ABCE54810}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankChallenge", "BankChallenge\BankChallenge.csproj", "{B34EEFD5-CD23-430A-9325-503F38D6AB03}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{FEB34AE8-94FC-483D-B547-B75ABCE54810}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FEB34AE8-94FC-483D-B547-B75ABCE54810}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FEB34AE8-94FC-483D-B547-B75ABCE54810}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B34EEFD5-CD23-430A-9325-503F38D6AB03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B34EEFD5-CD23-430A-9325-503F38D6AB03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B34EEFD5-CD23-430A-9325-503F38D6AB03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B34EEFD5-CD23-430A-9325-503F38D6AB03}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
