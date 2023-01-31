@@ -26,6 +26,7 @@ namespace BankChallenge
 
         public void Withdraw(Decimal _withdraw)
         {
+            //checking balance and procces count
             if (Balance>= _withdraw)
             {
                 counter++;

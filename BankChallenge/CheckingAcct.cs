@@ -24,6 +24,7 @@ namespace BankChallenge
 
         public void Withdraw(Decimal _withdraw)
         {
+            //checking balance
             if (Balance>=_withdraw)
             {
                 Balance -= _withdraw;
