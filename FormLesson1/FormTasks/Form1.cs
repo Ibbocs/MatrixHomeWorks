@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -43,6 +44,7 @@ namespace FormTasks
 
         }
 
+        #region Task1
         bool checkTheme = false;
         private void button2_Click(object sender, EventArgs e)
         {
@@ -96,7 +98,9 @@ namespace FormTasks
                 this.ForeColor = Color.Black;
             }
         }
+        #endregion
 
+        #region Task2
         private void bttnTask2_Click(object sender, EventArgs e)
         {
             string text;
@@ -115,20 +119,23 @@ namespace FormTasks
             }
         }
 
+        #endregion
+
+        #region Task3
         private void lstBox_Task2_Click(object sender, EventArgs e)
         {
-            //// string a = lstBox_Task2.SelectedIndex.ToString();
+            //// string a = lstBox_Task2.SelectedItem.ToString();
             //object text = lstBox_Task2.SelectedItem;
             //MessageBox.Show(text);
-            List<string> list = new List<string>();
+            //List<string> list = new List<string>();
 
-            foreach (var item in lstBox_Task2.Items.ToString())
-            {
-                list.Add(item.ToString());
-            }
+            //foreach (var item in lstBox_Task2.Items.ToString())
+            //{
+            //    list.Add(item.ToString());
+            //}
             //MessageBox.Show(list.ToString());
 
-
+            
         }
 
         private void lstBox_Task2_MouseClick(object sender, MouseEventArgs e)
@@ -138,15 +145,21 @@ namespace FormTasks
             //fild'e atacaq ve sonra secili texti listden sili, teze listi list boxa yazacaq. Amma secdiyiniz texdi
             //bir string filde'atdira bilmedim, listbox'u da liste(char olaraq atirdi). Click eventinde yazdiqlarimi
             //gore bilersiz
-
-            int index = lstBox_Task2.IndexFromPoint(e.Location);
-            if (index != ListBox.NoMatches)
-            {
-                lstBox_Task2.Items.RemoveAt(index);
-            }
+            lstBox_Task2.Items.RemoveAt(lstBox_Task2.SelectedIndex);
+            //int index = lstBox_Task2.IndexFromPoint(e.Location);
+            //if (index != ListBox.NoMatches)
+            //{
+            //    lstBox_Task2.Items.RemoveAt(index);
+            //}
 
             //int index = lstBox_Task2.SelectedIndex;
             //lstBox_Task2.Items.Remove(index);
+        }
+        #endregion
+
+        private void lstBox_Task2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

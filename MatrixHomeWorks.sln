@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassLibrary", "ClassLibrar
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MathLibrary", "MathLibrary\MathLibrary.csproj", "{FEB34AE8-94FC-483D-B547-B75ABCE54810}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankChallenge", "BankChallenge\BankChallenge.csproj", "{B34EEFD5-CD23-430A-9325-503F38D6AB03}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankChallenge", "BankChallenge\BankChallenge.csproj", "{B34EEFD5-CD23-430A-9325-503F38D6AB03}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileOperations", "FileOperations\FileOperations.csproj", "{486FF789-603B-455E-B206-862655ECFBA4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{B34EEFD5-CD23-430A-9325-503F38D6AB03}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B34EEFD5-CD23-430A-9325-503F38D6AB03}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B34EEFD5-CD23-430A-9325-503F38D6AB03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{486FF789-603B-455E-B206-862655ECFBA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{486FF789-603B-455E-B206-862655ECFBA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{486FF789-603B-455E-B206-862655ECFBA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{486FF789-603B-455E-B206-862655ECFBA4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

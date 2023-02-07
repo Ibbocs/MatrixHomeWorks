@@ -74,7 +74,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(272, 63);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Other Themes";
+            this.label2.Text = "Other Colour";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // button2
@@ -84,7 +84,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(272, 77);
             this.button2.TabIndex = 2;
-            this.button2.Text = "Light-Dark Mode";
+            this.button2.Text = "Light-Dark";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -103,22 +103,23 @@
             this.lstBox_Task2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lstBox_Task2.FormattingEnabled = true;
             this.lstBox_Task2.ItemHeight = 31;
-            this.lstBox_Task2.Location = new System.Drawing.Point(0, 240);
+            this.lstBox_Task2.Location = new System.Drawing.Point(0, 302);
             this.lstBox_Task2.Name = "lstBox_Task2";
-            this.lstBox_Task2.Size = new System.Drawing.Size(612, 345);
+            this.lstBox_Task2.Size = new System.Drawing.Size(394, 283);
             this.lstBox_Task2.TabIndex = 2;
             this.lstBox_Task2.Click += new System.EventHandler(this.lstBox_Task2_Click);
             this.lstBox_Task2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lstBox_Task2_MouseClick);
+            this.lstBox_Task2.SelectedIndexChanged += new System.EventHandler(this.lstBox_Task2_SelectedIndexChanged);
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.bttnTask2);
             this.panel2.Controls.Add(this.richTxtBox_Task2);
             this.panel2.Controls.Add(this.lstBox_Task2);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(272, 0);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel2.Location = new System.Drawing.Point(488, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(612, 585);
+            this.panel2.Size = new System.Drawing.Size(394, 585);
             this.panel2.TabIndex = 3;
             // 
             // bttnTask2
@@ -126,7 +127,7 @@
             this.bttnTask2.Dock = System.Windows.Forms.DockStyle.Top;
             this.bttnTask2.Location = new System.Drawing.Point(0, 160);
             this.bttnTask2.Name = "bttnTask2";
-            this.bttnTask2.Size = new System.Drawing.Size(612, 77);
+            this.bttnTask2.Size = new System.Drawing.Size(394, 77);
             this.bttnTask2.TabIndex = 4;
             this.bttnTask2.Text = "Add Text";
             this.bttnTask2.UseVisualStyleBackColor = true;
@@ -137,7 +138,7 @@
             this.richTxtBox_Task2.Dock = System.Windows.Forms.DockStyle.Top;
             this.richTxtBox_Task2.Location = new System.Drawing.Point(0, 0);
             this.richTxtBox_Task2.Name = "richTxtBox_Task2";
-            this.richTxtBox_Task2.Size = new System.Drawing.Size(612, 160);
+            this.richTxtBox_Task2.Size = new System.Drawing.Size(394, 160);
             this.richTxtBox_Task2.TabIndex = 4;
             this.richTxtBox_Task2.Text = "";
             // 
