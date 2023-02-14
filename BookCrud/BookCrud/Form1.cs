@@ -13,7 +13,7 @@ namespace BookCrud
 {
     public partial class Form1 : Form
     {
-        private BookADO db = new BookADO();
+        //private BookADO db = new BookADO();
 
         public Form1()
         {
@@ -26,27 +26,27 @@ namespace BookCrud
 
 
 
-        private Book getBook()
-        {
-            int bookId = Convert.ToInt32(txtBox_bookId.Text),
-                authorId = Convert.ToInt32(txtBox_authorId.Text),
-                publisherId = Convert.ToInt32(txtBox_publisherId.Text),
-                sellerId = Convert.ToInt32(txtBox_sellerId.Text),
-                pages = Convert.ToInt32(txtBox_Pages.Text),
-                bookAmount = Convert.ToInt32(txtBox_bookAmount.Text),
-                sellerAmount = Convert.ToInt32(txtBox_sellAmount.Text);
+        //private Book getBook()
+        //{
+        //    int bookId = Convert.ToInt32(txtBox_bookId.Text),
+        //        authorId = Convert.ToInt32(txtBox_authorId.Text),
+        //        publisherId = Convert.ToInt32(txtBox_publisherId.Text),
+        //        sellerId = Convert.ToInt32(txtBox_sellerId.Text),
+        //        pages = Convert.ToInt32(txtBox_Pages.Text),
+        //        bookAmount = Convert.ToInt32(txtBox_bookAmount.Text),
+        //        sellerAmount = Convert.ToInt32(txtBox_sellAmount.Text);
 
-            string bookName = txtBox_bookName.Text,
-                year = txtBox_year.Text,
-                authorName = txtBox_authorName.Text,
-                authorSurname = txtBox_Surname.Text,
-                publisher = txtBox_publisher.Text,
-                seller = txtBox_seller.Text;
+        //    string bookName = txtBox_bookName.Text,
+        //        year = txtBox_year.Text,
+        //        authorName = txtBox_authorName.Text,
+        //        authorSurname = txtBox_Surname.Text,
+        //        publisher = txtBox_publisher.Text,
+        //        seller = txtBox_seller.Text;
 
-            return new Book(bookId,authorId,publisherId,sellerId,bookName,pages,year,authorName,
-                            authorSurname,publisher,bookAmount,seller,sellerAmount);
+        //    return new Book(bookId,authorId,publisherId,sellerId,bookName,pages,year,authorName,
+        //                    authorSurname,publisher,bookAmount,seller,sellerAmount);
 
-        }
+        //}
 
         private void label2_Click(object sender, EventArgs e)
         {
@@ -55,18 +55,18 @@ namespace BookCrud
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+           // dataGridViewAll.DataSource = MyCrud.list("sellectAll");
         }
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
-            db.Disconnect();
+            //db.Disconnect();
         }
 
         private void bttn_add_Click(object sender, EventArgs e)
         {
-            Book bk = getBook();
-            bk.AddStudent(db);
+            //Book bk = getBook();
+            //bk.AddStudent(db);
         }
     }
 }

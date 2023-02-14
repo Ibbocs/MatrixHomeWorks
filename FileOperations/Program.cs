@@ -26,35 +26,49 @@ namespace FileOperations
             //fi.AppendText(); bu text harda yaziriq?
             // Directory.CreateDirectory(args[0]); bu ne olur ki?
             //DirectoryInfo directory= new DirectoryInfo(args[0]); bu ne? args[0]
+            //.txt hisesini almag ucun method var?
 
+            //yersiz strart verende fileler olusacaq ve qarisiqliq olacaq...
             Console.WriteLine("Hello World!");
-
-            MoveAllfiles();
 
             #region Task1
             string path = @"C:\Users\user\source\repos\MatrixHomeWorks\FileOperations\Works\Task1";
-            
-            string txt1 = File.ReadAllText(Path.Combine(path, "File1.txt"));
-            string txt2 = File.ReadAllText(Path.Combine(path, "File2.txt"));
-            string txt3 = File.ReadAllText(Path.Combine(path, "File3.txt"));
-            string allText;
-            allText = readerTask1(txt1);
-            allText += readerTask1(txt2);
-            allText += readerTask1(txt3);
+            try
+            {
+                
 
-            if (File.Exists(Path.Combine(path, "File4.txt")) == false)
-            {
-                File.Create(Path.Combine(path, "File4.txt"));//file4 olmayanda xeta verdi icaze xetasi bunu task ikidedki kimi etiket ile hell elemeye olar yeqin
-                File.WriteAllText(Path.Combine(path, "File4.txt"), allText, System.Text.Encoding.Default);//encoding deyesen icazedi???
+                string txt1 = File.ReadAllText(Path.Combine(path, "File1.txt"));
+                string txt2 = File.ReadAllText(Path.Combine(path, "File2.txt"));
+                string txt3 = File.ReadAllText(Path.Combine(path, "File3.txt"));
+                string allText;
+                allText = readerTask1(txt1);
+                allText += readerTask1(txt2);
+                allText += readerTask1(txt3);
+
+                if (File.Exists(Path.Combine(path, "File4.txt")) == false)
+                {
+                    File.Create(Path.Combine(path, "File4.txt"));//file4 olmayanda xeta verdi icaze xetasi bunu task ikidedki kimi etiket ile hell elemeye olar yeqin
+                    File.WriteAllText(Path.Combine(path, "File4.txt"), allText, System.Text.Encoding.Default);
+                    //encoding deyesen icazedi???
+
+                    
+                }
+                else
+                {
+                    File.WriteAllText(Path.Combine(path, "File4.txt"), allText, System.Text.Encoding.Default);
+                }
             }
-            else
+            catch (Exception ex)
             {
-                File.WriteAllText(Path.Combine(path, "File4.txt"), allText, System.Text.Encoding.Default);
+
+                Console.WriteLine(ex.ToString());   
             }
+
+            
 
             #endregion
 
-
+            #region Task2
             string path2 = @"C:\Users\user\source\repos\MatrixHomeWorks\FileOperations\Works\Task2";
             string directoryName = "sadruh";
             string fileName = "episode1";
@@ -73,80 +87,88 @@ namespace FileOperations
                 goto elsetoif;
             }
 
+            #endregion
+
+            #region Task3
+
+            //MoveAllfiles();
+
+            #endregion
+
             #region Task1Ugursuz
-            //Directory.CreateDirectory(path + "Task1");
-            //path = path + "Task1";
-            //string[] fileName = { "File1.txt", "File2.txt", "File3.txt" };
-            ////string[] infoo = { "İlham Abbasov 239103ASD 1993", "NAme Surname 231998ADE 1992", "Teymur Mammadov 4785965DEF 1995" };
-            //List<string> info = new List<string> { "İlham Abbasov 239103ASD 1993", "NAme Surname 231998ADE 1992", "Teymur Mammadov 4785965DEF 1995" };
-            //string[] newPath = new string[fileName.Length];
+            Directory.CreateDirectory(path + "Task1");
+            path = path + "Task1";
+            string[] fileNamee = { "File1.txt", "File2.txt", "File3.txt" };
+            //string[] infoo = { "İlham Abbasov 239103ASD 1993", "NAme Surname 231998ADE 1992", "Teymur Mammadov 4785965DEF 1995" };
+            List<string> info = new List<string> { "İlham Abbasov 239103ASD 1993", "NAme Surname 231998ADE 1992", "Teymur Mammadov 4785965DEF 1995" };
+            string[] newPath = new string[fileNamee.Length];
 
-            //for (int i = 0; i < fileName.Length; i++)
-            //{
-            //    newPath[i]= Path.Combine(path , fileName[i]);
-            //}
+            for (int i = 0; i < fileName.Length; i++)
+            {
+                newPath[i] = Path.Combine(path, fileNamee[i]);
+            }
 
-            //for (int i = 0; i < newPath.Length; i++)
-            //{
-            //    using (FileStream fs = new FileStream(newPath[i], FileMode.Open, FileAccess.Write))
-            //    {
-            //        StreamWriter streamWriter = new StreamWriter(fs);
+            for (int i = 0; i < newPath.Length; i++)
+            {
+                using (FileStream fs = new FileStream(newPath[i], FileMode.Open, FileAccess.Write))
+                {
+                    StreamWriter streamWriter = new StreamWriter(fs);
 
-            //        if (File.Exists(newPath[i]))
-            //        {
-            //            //FileInfo fi = new FileInfo(newPath[i]);
-            //            //fi.Delete();
-            //            //fi.Create();
-            //            //File.Delete(newPath[i]);
-            //            //File.Create(newPath[i]);
-
-
-            //            if (i == 0)
-            //            {
-            //                streamWriter.WriteLine(info[i]);
-            //                streamWriter.Close();
-            //                //File.WriteAllText(newPath[i], info[i], System.Text.Encoding.Default);
-            //            }
-            //            else if (i == 1)
-            //            {
-            //                streamWriter.WriteLine(info[i]);
-            //                streamWriter.Close();
-            //                //File.WriteAllText(newPath[i], info[i], System.Text.Encoding.Default);
-            //            }
-            //            else
-            //            {
-            //                streamWriter.WriteLine(info[i]);
-            //                streamWriter.Close();
-            //                //File.WriteAllText(newPath[i], info[i], System.Text.Encoding.Default);
-            //            }
+                    if (File.Exists(newPath[i]))
+                    {
+                        //FileInfo fi = new FileInfo(newPath[i]);
+                        //fi.Delete();
+                        //fi.Create();
+                        //File.Delete(newPath[i]);
+                        //File.Create(newPath[i]);
 
 
-            //        }
-            //        else
-            //        {
-            //            File.Create(newPath[i]);
+                        if (i == 0)
+                        {
+                            streamWriter.WriteLine(info[i]);
+                            streamWriter.Close();
+                            //File.WriteAllText(newPath[i], info[i], System.Text.Encoding.Default);
+                        }
+                        else if (i == 1)
+                        {
+                            streamWriter.WriteLine(info[i]);
+                            streamWriter.Close();
+                            //File.WriteAllText(newPath[i], info[i], System.Text.Encoding.Default);
+                        }
+                        else
+                        {
+                            streamWriter.WriteLine(info[i]);
+                            streamWriter.Close();
+                            //File.WriteAllText(newPath[i], info[i], System.Text.Encoding.Default);
+                        }
 
-            //            if (i == 0)
-            //            {
-            //                streamWriter.WriteLine(info[i]);
-            //                streamWriter.Close();
-            //                //File.WriteAllText(newPath[i], info[i], System.Text.Encoding.Default);
-            //            }
-            //            else if (i == 1)
-            //            {
-            //                streamWriter.WriteLine(info[i]);
-            //                streamWriter.Close();
-            //                //File.WriteAllText(newPath[i], info[i], System.Text.Encoding.Default);
-            //            }
-            //            else
-            //            {
-            //                streamWriter.WriteLine(info[i]);
-            //                streamWriter.Close();
-            //                //File.WriteAllText(newPath[i], info[i], System.Text.Encoding.Default);
-            //            }
-            //        }
-            //    }
-            //}
+
+                    }
+                    else
+                    {
+                        File.Create(newPath[i]);
+
+                        if (i == 0)
+                        {
+                            streamWriter.WriteLine(info[i]);
+                            streamWriter.Close();
+                            //File.WriteAllText(newPath[i], info[i], System.Text.Encoding.Default);
+                        }
+                        else if (i == 1)
+                        {
+                            streamWriter.WriteLine(info[i]);
+                            streamWriter.Close();
+                            //File.WriteAllText(newPath[i], info[i], System.Text.Encoding.Default);
+                        }
+                        else
+                        {
+                            streamWriter.WriteLine(info[i]);
+                            streamWriter.Close();
+                            //File.WriteAllText(newPath[i], info[i], System.Text.Encoding.Default);
+                        }
+                    }
+                }
+            }
             #endregion
         }
 
@@ -154,7 +176,7 @@ namespace FileOperations
         {
             string path3 = @"C:\Users\user\source\repos\MatrixHomeWorks\FileOperations\Works\Task3";
             string path3BU = @"C:\Users\user\source\repos\MatrixHomeWorks\FileOperations\Works\Task3\BackUp";
-            //.txt hisesini almag ucun method var?
+            
             DateTime file1Date = File.GetCreationTime(Path.Combine(path3, "File1.txt"));
             string file1NewName = $"File1{file1Date.ToString("yyyy-mm-dd")}.txt";
             DateTime file2Date = File.GetCreationTime(Path.Combine(path3, "File2.txt"));
@@ -163,9 +185,9 @@ namespace FileOperations
             string file3NewName = $"File3{file3Date.ToString("yyyy-mm-dd")}.txt";
             DateTime file4Date = File.GetCreationTime(Path.Combine(path3, "File4.txt"));
             string file4NewName = $"File4{file4Date.ToString("yyyy-mm-dd")}.txt";
+            
 
             //file1NewName = "File1" + File.GetCreationTime(Path.Combine(path3, "File1.txt") + ".txt";
-
 
             //File.Move(Path.Combine(path3, "File1.txt"), Path.Combine(path3, "BackUp", file1NewName));
             File.Move(Path.Combine(path3, "File1.txt"), Path.Combine(path3BU, file1NewName));

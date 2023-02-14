@@ -1,14 +1,14 @@
 ﻿namespace BookCrud
 {
-    partial class Form1
+    partial class Form2
     {
         /// <summary>
-        ///  Required designer variable.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        ///  Clean up any resources being used.
+        /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
@@ -23,11 +23,12 @@
         #region Windows Form Designer generated code
 
         /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtBox_authorName = new System.Windows.Forms.TextBox();
             this.txtBox_authorId = new System.Windows.Forms.TextBox();
@@ -46,9 +47,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtBox_seller = new System.Windows.Forms.TextBox();
-            this.txtBox_type = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.txtBox_sellAmount = new System.Windows.Forms.TextBox();
             this.txtBox_Pages = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -57,22 +56,31 @@
             this.label8 = new System.Windows.Forms.Label();
             this.txtBox_bookId = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label16 = new System.Windows.Forms.Label();
-            this.bttn_delete = new System.Windows.Forms.Button();
-            this.bttn_update = new System.Windows.Forms.Button();
             this.bttn_add = new System.Windows.Forms.Button();
-            this.bttn_show = new System.Windows.Forms.Button();
-            this.label15 = new System.Windows.Forms.Label();
             this.dataGridViewAll = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAll)).BeginInit();
             this.SuspendLayout();
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "New Book",
+            "New Author",
+            "New Publisher",
+            "New Seller"});
+            this.comboBox1.Location = new System.Drawing.Point(12, 12);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(360, 28);
+            this.comboBox1.TabIndex = 0;
+            this.comboBox1.Text = "Chose Operation";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.txtBox_authorName);
+            this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.txtBox_authorId);
             this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.label2);
@@ -89,9 +97,7 @@
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.txtBox_seller);
-            this.panel1.Controls.Add(this.txtBox_type);
             this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.txtBox_sellAmount);
             this.panel1.Controls.Add(this.txtBox_Pages);
             this.panel1.Controls.Add(this.label9);
@@ -103,21 +109,21 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(386, 631);
-            this.panel1.TabIndex = 0;
+            this.panel1.Size = new System.Drawing.Size(386, 623);
+            this.panel1.TabIndex = 1;
             // 
             // txtBox_authorName
             // 
             this.txtBox_authorName.Location = new System.Drawing.Point(187, 358);
             this.txtBox_authorName.Name = "txtBox_authorName";
-            this.txtBox_authorName.Size = new System.Drawing.Size(185, 38);
+            this.txtBox_authorName.Size = new System.Drawing.Size(185, 27);
             this.txtBox_authorName.TabIndex = 1;
             // 
             // txtBox_authorId
             // 
-            this.txtBox_authorId.Location = new System.Drawing.Point(187, 50);
+            this.txtBox_authorId.Location = new System.Drawing.Point(187, 94);
             this.txtBox_authorId.Name = "txtBox_authorId";
-            this.txtBox_authorId.Size = new System.Drawing.Size(185, 38);
+            this.txtBox_authorId.Size = new System.Drawing.Size(185, 27);
             this.txtBox_authorId.TabIndex = 1;
             // 
             // label14
@@ -128,11 +134,10 @@
             this.label14.TabIndex = 0;
             this.label14.Text = "Author Name";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label14.Click += new System.EventHandler(this.label2_Click);
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(3, 50);
+            this.label2.Location = new System.Drawing.Point(3, 94);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(178, 38);
             this.label2.TabIndex = 0;
@@ -143,14 +148,14 @@
             // 
             this.txtBox_Surname.Location = new System.Drawing.Point(187, 402);
             this.txtBox_Surname.Name = "txtBox_Surname";
-            this.txtBox_Surname.Size = new System.Drawing.Size(185, 38);
+            this.txtBox_Surname.Size = new System.Drawing.Size(185, 27);
             this.txtBox_Surname.TabIndex = 1;
             // 
             // txtBox_publisherId
             // 
-            this.txtBox_publisherId.Location = new System.Drawing.Point(187, 94);
+            this.txtBox_publisherId.Location = new System.Drawing.Point(187, 138);
             this.txtBox_publisherId.Name = "txtBox_publisherId";
-            this.txtBox_publisherId.Size = new System.Drawing.Size(185, 38);
+            this.txtBox_publisherId.Size = new System.Drawing.Size(185, 27);
             this.txtBox_publisherId.TabIndex = 1;
             // 
             // label13
@@ -164,7 +169,7 @@
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(3, 94);
+            this.label3.Location = new System.Drawing.Point(3, 138);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(178, 38);
             this.label3.TabIndex = 0;
@@ -175,14 +180,14 @@
             // 
             this.txtBox_publisher.Location = new System.Drawing.Point(187, 446);
             this.txtBox_publisher.Name = "txtBox_publisher";
-            this.txtBox_publisher.Size = new System.Drawing.Size(185, 38);
+            this.txtBox_publisher.Size = new System.Drawing.Size(185, 27);
             this.txtBox_publisher.TabIndex = 1;
             // 
             // txtBox_sellerId
             // 
-            this.txtBox_sellerId.Location = new System.Drawing.Point(187, 138);
+            this.txtBox_sellerId.Location = new System.Drawing.Point(187, 182);
             this.txtBox_sellerId.Name = "txtBox_sellerId";
-            this.txtBox_sellerId.Size = new System.Drawing.Size(185, 38);
+            this.txtBox_sellerId.Size = new System.Drawing.Size(185, 27);
             this.txtBox_sellerId.TabIndex = 1;
             // 
             // label12
@@ -196,7 +201,7 @@
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(3, 138);
+            this.label4.Location = new System.Drawing.Point(3, 182);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(178, 38);
             this.label4.TabIndex = 0;
@@ -207,14 +212,14 @@
             // 
             this.txtBox_bookAmount.Location = new System.Drawing.Point(187, 490);
             this.txtBox_bookAmount.Name = "txtBox_bookAmount";
-            this.txtBox_bookAmount.Size = new System.Drawing.Size(185, 38);
+            this.txtBox_bookAmount.Size = new System.Drawing.Size(185, 27);
             this.txtBox_bookAmount.TabIndex = 1;
             // 
             // txtBox_bookName
             // 
-            this.txtBox_bookName.Location = new System.Drawing.Point(187, 182);
+            this.txtBox_bookName.Location = new System.Drawing.Point(187, 226);
             this.txtBox_bookName.Name = "txtBox_bookName";
-            this.txtBox_bookName.Size = new System.Drawing.Size(185, 38);
+            this.txtBox_bookName.Size = new System.Drawing.Size(185, 27);
             this.txtBox_bookName.TabIndex = 1;
             // 
             // label11
@@ -228,7 +233,7 @@
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(3, 182);
+            this.label5.Location = new System.Drawing.Point(3, 226);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(178, 38);
             this.label5.TabIndex = 0;
@@ -239,15 +244,8 @@
             // 
             this.txtBox_seller.Location = new System.Drawing.Point(187, 534);
             this.txtBox_seller.Name = "txtBox_seller";
-            this.txtBox_seller.Size = new System.Drawing.Size(185, 38);
+            this.txtBox_seller.Size = new System.Drawing.Size(185, 27);
             this.txtBox_seller.TabIndex = 1;
-            // 
-            // txtBox_type
-            // 
-            this.txtBox_type.Location = new System.Drawing.Point(187, 226);
-            this.txtBox_type.Name = "txtBox_type";
-            this.txtBox_type.Size = new System.Drawing.Size(185, 38);
-            this.txtBox_type.TabIndex = 1;
             // 
             // label10
             // 
@@ -258,27 +256,18 @@
             this.label10.Text = "Seller";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label6
-            // 
-            this.label6.Location = new System.Drawing.Point(3, 226);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(178, 38);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Type";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // txtBox_sellAmount
             // 
             this.txtBox_sellAmount.Location = new System.Drawing.Point(187, 578);
             this.txtBox_sellAmount.Name = "txtBox_sellAmount";
-            this.txtBox_sellAmount.Size = new System.Drawing.Size(185, 38);
+            this.txtBox_sellAmount.Size = new System.Drawing.Size(185, 27);
             this.txtBox_sellAmount.TabIndex = 1;
             // 
             // txtBox_Pages
             // 
             this.txtBox_Pages.Location = new System.Drawing.Point(187, 270);
             this.txtBox_Pages.Name = "txtBox_Pages";
-            this.txtBox_Pages.Size = new System.Drawing.Size(185, 38);
+            this.txtBox_Pages.Size = new System.Drawing.Size(185, 27);
             this.txtBox_Pages.TabIndex = 1;
             // 
             // label9
@@ -303,7 +292,7 @@
             // 
             this.txtBox_year.Location = new System.Drawing.Point(187, 314);
             this.txtBox_year.Name = "txtBox_year";
-            this.txtBox_year.Size = new System.Drawing.Size(185, 38);
+            this.txtBox_year.Size = new System.Drawing.Size(185, 27);
             this.txtBox_year.TabIndex = 1;
             // 
             // label8
@@ -317,121 +306,58 @@
             // 
             // txtBox_bookId
             // 
-            this.txtBox_bookId.Location = new System.Drawing.Point(187, 6);
+            this.txtBox_bookId.Location = new System.Drawing.Point(187, 50);
             this.txtBox_bookId.Name = "txtBox_bookId";
-            this.txtBox_bookId.Size = new System.Drawing.Size(185, 38);
+            this.txtBox_bookId.Size = new System.Drawing.Size(185, 27);
             this.txtBox_bookId.TabIndex = 1;
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(3, 6);
+            this.label1.Location = new System.Drawing.Point(3, 50);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(178, 38);
             this.label1.TabIndex = 0;
             this.label1.Text = "Book Id";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.label16);
-            this.panel2.Controls.Add(this.bttn_delete);
-            this.panel2.Controls.Add(this.bttn_update);
-            this.panel2.Controls.Add(this.bttn_add);
-            this.panel2.Controls.Add(this.bttn_show);
-            this.panel2.Controls.Add(this.label15);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(386, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(230, 631);
-            this.panel2.TabIndex = 1;
-            // 
-            // label16
-            // 
-            this.label16.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label16.Location = new System.Drawing.Point(0, 513);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(230, 118);
-            this.label16.TabIndex = 5;
-            // 
-            // bttn_delete
-            // 
-            this.bttn_delete.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bttn_delete.Location = new System.Drawing.Point(0, 402);
-            this.bttn_delete.Name = "bttn_delete";
-            this.bttn_delete.Size = new System.Drawing.Size(230, 88);
-            this.bttn_delete.TabIndex = 4;
-            this.bttn_delete.Text = "Delete";
-            this.bttn_delete.UseVisualStyleBackColor = true;
-            // 
-            // bttn_update
-            // 
-            this.bttn_update.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bttn_update.Location = new System.Drawing.Point(0, 314);
-            this.bttn_update.Name = "bttn_update";
-            this.bttn_update.Size = new System.Drawing.Size(230, 88);
-            this.bttn_update.TabIndex = 3;
-            this.bttn_update.Text = "Update";
-            this.bttn_update.UseVisualStyleBackColor = true;
-            // 
             // bttn_add
             // 
             this.bttn_add.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bttn_add.Location = new System.Drawing.Point(0, 226);
+            this.bttn_add.Location = new System.Drawing.Point(386, 0);
             this.bttn_add.Name = "bttn_add";
-            this.bttn_add.Size = new System.Drawing.Size(230, 88);
-            this.bttn_add.TabIndex = 2;
+            this.bttn_add.Size = new System.Drawing.Size(650, 88);
+            this.bttn_add.TabIndex = 3;
             this.bttn_add.Text = "Add";
             this.bttn_add.UseVisualStyleBackColor = true;
             this.bttn_add.Click += new System.EventHandler(this.bttn_add_Click);
-            // 
-            // bttn_show
-            // 
-            this.bttn_show.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bttn_show.Location = new System.Drawing.Point(0, 138);
-            this.bttn_show.Name = "bttn_show";
-            this.bttn_show.Size = new System.Drawing.Size(230, 88);
-            this.bttn_show.TabIndex = 1;
-            this.bttn_show.Text = "Show";
-            this.bttn_show.UseVisualStyleBackColor = true;
-            // 
-            // label15
-            // 
-            this.label15.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label15.Location = new System.Drawing.Point(0, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(230, 138);
-            this.label15.TabIndex = 0;
             // 
             // dataGridViewAll
             // 
             this.dataGridViewAll.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewAll.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewAll.Dock = System.Windows.Forms.DockStyle.Left;
-            this.dataGridViewAll.Location = new System.Drawing.Point(616, 0);
+            this.dataGridViewAll.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewAll.Location = new System.Drawing.Point(386, 88);
             this.dataGridViewAll.Name = "dataGridViewAll";
             this.dataGridViewAll.RowHeadersWidth = 51;
             this.dataGridViewAll.RowTemplate.Height = 29;
             this.dataGridViewAll.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewAll.Size = new System.Drawing.Size(657, 631);
-            this.dataGridViewAll.TabIndex = 2;
+            this.dataGridViewAll.Size = new System.Drawing.Size(650, 535);
+            this.dataGridViewAll.TabIndex = 4;
             // 
-            // Form1
+            // Form2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1282, 631);
+            this.ClientSize = new System.Drawing.Size(1036, 623);
             this.Controls.Add(this.dataGridViewAll);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.bttn_add);
             this.Controls.Add(this.panel1);
-            this.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Margin = new System.Windows.Forms.Padding(5);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.MinimumSize = new System.Drawing.Size(1054, 670);
+            this.Name = "Form2";
+            this.Text = "v";
+            this.Load += new System.EventHandler(this.Form2_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAll)).EndInit();
             this.ResumeLayout(false);
 
@@ -439,9 +365,8 @@
 
         #endregion
 
+        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox txtBox_bookId;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtBox_authorName;
         private System.Windows.Forms.TextBox txtBox_authorId;
         private System.Windows.Forms.Label label14;
@@ -459,22 +384,16 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtBox_seller;
-        private System.Windows.Forms.TextBox txtBox_type;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtBox_sellAmount;
         private System.Windows.Forms.TextBox txtBox_Pages;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtBox_year;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Button bttn_delete;
-        private System.Windows.Forms.Button bttn_update;
+        private System.Windows.Forms.TextBox txtBox_bookId;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button bttn_add;
-        private System.Windows.Forms.Button bttn_show;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.DataGridView dataGridViewAll;
     }
 }
