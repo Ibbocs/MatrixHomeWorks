@@ -29,7 +29,7 @@ namespace ApiSqlCrud.Models
                             Book newBook = new Book();
 
                             newBook.Id = (int)dt.Rows[i]["Id"];
-                            newBook.Name = (string)dt.Rows[i]["Name"];
+                            newBook.Name = dt.Rows[i]["Name"].ToString();
                             newBook.Pages = (int)dt.Rows[i]["Pages"];
                             newBook.RelaseDate = dt.Rows[i]["RelaseDate"].ToString();
                             newBook.Author = (string)dt.Rows[i]["Author"];
@@ -67,7 +67,7 @@ namespace ApiSqlCrud.Models
             return response;
         }
 
-        public Response AddBook(string commandText)
+        public Response AddBook(string commandText, Book book)
         {
             Response response = new Response();
 
@@ -75,14 +75,14 @@ namespace ApiSqlCrud.Models
             SqlCommand insertCommand = new SqlCommand(commandText, mySqlConnection);
             insertCommand.CommandType = CommandType.StoredProcedure;
 
-            using (SqlDataAdapter sqlData = new SqlDataAdapter(insertCommand))
-            {
+            
+            
                 
                 int result = 0;
                 
                 try
                 {
-                    Book book = new Book();
+                    //Book book = new Book();
 
                     insertCommand.Parameters.AddWithValue("@Name", book.Name);
                     insertCommand.Parameters.AddWithValue("@Pages", book.Pages);
@@ -101,7 +101,7 @@ namespace ApiSqlCrud.Models
                     Disconnect();
                 }
 
-                if (result >0)
+                if (result <0)
                 {
                     response.StatusCode = 200;
                     response.StatusMassage = "Book Added";
@@ -112,12 +112,12 @@ namespace ApiSqlCrud.Models
                     response.StatusMassage = "No Data Inserted";
                 }
 
-            }
+            
 
             return response;
         }
 
-        public Response UpdateBook(string commandText)
+        public Response UpdateBook(string commandText,Book book )
         {
             Response response = new Response();
 
@@ -125,14 +125,14 @@ namespace ApiSqlCrud.Models
             SqlCommand insertCommand = new SqlCommand(commandText, mySqlConnection);
             insertCommand.CommandType = CommandType.StoredProcedure;
 
-            using (SqlDataAdapter sqlData = new SqlDataAdapter(insertCommand))
-            {
+            
+            
 
                 int result = 0;
 
                 try
                 {
-                    Book book = new Book();
+                    //Book book = new Book();
 
                     insertCommand.Parameters.AddWithValue("@Name", book.Name);
                     insertCommand.Parameters.AddWithValue("@Author", book.Author);
@@ -153,7 +153,7 @@ namespace ApiSqlCrud.Models
                     Disconnect();
                 }
 
-                if (result > 0)
+                if (result <0)
                 {
                     response.StatusCode = 200;
                     response.StatusMassage = "Book Updated";
@@ -164,7 +164,7 @@ namespace ApiSqlCrud.Models
                     response.StatusMassage = "No Data Updated";
                 }
 
-            }
+            
 
             return response;
         }
@@ -177,8 +177,8 @@ namespace ApiSqlCrud.Models
             SqlCommand insertCommand = new SqlCommand(commandText, mySqlConnection);
             insertCommand.CommandType = CommandType.StoredProcedure;
 
-            using (SqlDataAdapter sqlData = new SqlDataAdapter(insertCommand))
-            {
+            
+            
 
                 int result = 0;
 
@@ -197,7 +197,7 @@ namespace ApiSqlCrud.Models
                     Disconnect();
                 }
 
-                if (result > 0)
+                if (result <0)
                 {
                     response.StatusCode = 200;
                     response.StatusMassage = "Book Deleted";
@@ -208,7 +208,7 @@ namespace ApiSqlCrud.Models
                     response.StatusMassage = "No Data Deleted";
                 }
 
-            }
+            
 
             return response;
         }

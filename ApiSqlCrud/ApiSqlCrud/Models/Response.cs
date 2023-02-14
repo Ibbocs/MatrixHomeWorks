@@ -6,7 +6,7 @@ namespace ApiSqlCrud.Models
     {
         public int StatusCode { get; set; }
         public string StatusMassage{ get; set; }
-        public Book Book { get; set; }
+        //public Book Book { get; set; }
 
         public string exception = "All Things Are Good";
 

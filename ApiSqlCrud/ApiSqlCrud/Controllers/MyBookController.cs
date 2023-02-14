@@ -11,10 +11,10 @@ namespace ApiSqlCrud.Controllers
         [HttpGet]
         public Response GetBooks()
         {
-            Response response = new Response();
+            
             MyApiCrud myApiCrud = new MyApiCrud();
-
-            response = myApiCrud.GetAllBooks("SellectPro");
+            //Response response = new Response();
+            Response response = myApiCrud.GetAllBooks("SellectPro");
 
             return response;
         }
@@ -23,10 +23,11 @@ namespace ApiSqlCrud.Controllers
         public Response AddBook([FromQuery] Book book)
         {
             //bookun icini niye null gonderir ki?
+            
             Response response = new Response();
             MyApiCrud myApiCrud = new MyApiCrud();
 
-            response = myApiCrud.AddBook("InsertPro");
+            response = myApiCrud.AddBook("InsertPro", book);
 
 
             return response;
@@ -39,7 +40,7 @@ namespace ApiSqlCrud.Controllers
             Response response = new Response();
             MyApiCrud myApiCrud = new MyApiCrud();
 
-            response = myApiCrud.UpdateBook("UpdatePro");
+            response = myApiCrud.UpdateBook("UpdatePro", book);
 
 
             return response;
