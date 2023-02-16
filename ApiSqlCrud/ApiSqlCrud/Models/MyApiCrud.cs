@@ -6,88 +6,91 @@ namespace ApiSqlCrud.Models
 {
     public class MyApiCrud  : MyConnection
     {
-        public List<Book> listBook = new List<Book>();
+        //public List<Book> listBook = new List<Book>();
 
         public Response GetAllBooks(string commandText)
         {
             Response response= new Response();
+            DataTable dt = new DataTable();
+            List<Book> list = new List<Book>();
 
-            Connect();
-            using (SqlDataAdapter sqlData = new SqlDataAdapter(commandText, mySqlConnection))
+            try
             {
-                DataTable dt = new DataTable();
-
-                sqlData.Fill(dt);
-
-                List<Book> list = new List<Book>();
-                try
+                Connect();
+                using (SqlDataAdapter sqlData = new SqlDataAdapter(commandText, mySqlConnection))
                 {
-                    if (dt.Rows.Count > 0)
+                    sqlData.Fill(dt);
+
+                    try
                     {
-                        for (int i = 0; i < dt.Rows.Count; i++)
+                        if (dt.Rows.Count > 0)
                         {
-                            Book newBook = new Book();
+                            for (int i = 0; i < dt.Rows.Count; i++)
+                            {
+                                Book newBook = new Book();
 
-                            newBook.Id = (int)dt.Rows[i]["Id"];
-                            newBook.Name = dt.Rows[i]["Name"].ToString();
-                            newBook.Pages = (int)dt.Rows[i]["Pages"];
-                            newBook.RelaseDate = dt.Rows[i]["RelaseDate"].ToString();
-                            newBook.Author = (string)dt.Rows[i]["Author"];
+                                newBook.Id = (int)dt.Rows[i]["Id"];
+                                newBook.Name = dt.Rows[i]["Name"].ToString();
+                                newBook.Pages = (int)dt.Rows[i]["Pages"];
+                                newBook.RelaseDate = dt.Rows[i]["RelaseDate"].ToString();
+                                newBook.Author = (string)dt.Rows[i]["Author"];
 
-                            list.Add(newBook);
+                                list.Add(newBook);
+                            }
                         }
                     }
-                }
-                catch (System.Exception ex)
-                {
+                    catch (System.Exception ex)
+                    {
 
-                    response.exception = ex.ToString();
-                }
-                finally
-                {
-                    Disconnect();
-                }
+                        response.exception = ex.ToString();
+                    }
+                    finally
+                    {
+                        Disconnect();
+                    }
 
-                if (list.Count>0)
-                {
-                    response.StatusCode = 200;
-                    response.StatusMassage = "Data Found";
+                    if (list.Count > 0)
+                    {
+                        response.StatusCode = 200;
+                        response.StatusMassage = "Data Found";
 
-                    response.listOfBooks = list;
+                        response.listOfBooks = list;
+                    }
+                    else
+                    {
+                        response.StatusCode = 100;
+                        response.StatusMassage = "No Data Found";
+                        response.listOfBooks = null;
+                    }
+
                 }
-                else
-                {
-                    response.StatusCode = 100;
-                    response.StatusMassage = "No Data Found";
-                    response.listOfBooks = null;
-                }
-                
             }
+            catch (System.Exception ex)
+            {
+
+                response.exception = ex.ToString();
+            }
+           
 
             return response;
         }
 
-        public Response AddBook(string commandText, Book book)
+        public Response AddBook(string commandText, BookDTO bookDTO)
         {
-            Response response = new Response();
-
-            Connect();
-            SqlCommand insertCommand = new SqlCommand(commandText, mySqlConnection);
-            insertCommand.CommandType = CommandType.StoredProcedure;
-
-            
-            
-                
+                Response response = new Response();
                 int result = 0;
-                
+
                 try
                 {
                     //Book book = new Book();
+                    Connect();
+                    SqlCommand insertCommand = new SqlCommand(commandText, mySqlConnection);
+                    insertCommand.CommandType = CommandType.StoredProcedure;
 
-                    insertCommand.Parameters.AddWithValue("@Name", book.Name);
-                    insertCommand.Parameters.AddWithValue("@Pages", book.Pages);
-                    insertCommand.Parameters.AddWithValue("@RelaseDate", book.RelaseDate);
-                    insertCommand.Parameters.AddWithValue("@Author", book.Author);
+                    insertCommand.Parameters.AddWithValue("@Name", bookDTO.Name);
+                    insertCommand.Parameters.AddWithValue("@Pages", bookDTO.Pages);
+                    insertCommand.Parameters.AddWithValue("@RelaseDate", bookDTO.RelaseDate);
+                    insertCommand.Parameters.AddWithValue("@Author", bookDTO.Author);
 
                     result = insertCommand.ExecuteNonQuery();
                 }
@@ -117,28 +120,23 @@ namespace ApiSqlCrud.Models
             return response;
         }
 
-        public Response UpdateBook(string commandText,Book book )
+        public Response UpdateBook(string commandText,BookDTO bookDTO, int id)
         {
-            Response response = new Response();
-
-            Connect();
-            SqlCommand insertCommand = new SqlCommand(commandText, mySqlConnection);
-            insertCommand.CommandType = CommandType.StoredProcedure;
-
-            
-            
-
+                Response response = new Response();
                 int result = 0;
 
                 try
                 {
                     //Book book = new Book();
+                    Connect();
+                    SqlCommand insertCommand = new SqlCommand(commandText, mySqlConnection);
+                    insertCommand.CommandType = CommandType.StoredProcedure;
 
-                    insertCommand.Parameters.AddWithValue("@Name", book.Name);
-                    insertCommand.Parameters.AddWithValue("@Author", book.Author);
-                    insertCommand.Parameters.AddWithValue("@Pages", book.Pages);
-                    insertCommand.Parameters.AddWithValue("@RelaseDate", book.RelaseDate);
-                    insertCommand.Parameters.AddWithValue("@bookId", book.Id);
+                    insertCommand.Parameters.AddWithValue("@Name", bookDTO.Name);
+                    insertCommand.Parameters.AddWithValue("@Author", bookDTO.Author);
+                    insertCommand.Parameters.AddWithValue("@Pages", bookDTO.Pages);
+                    insertCommand.Parameters.AddWithValue("@RelaseDate", bookDTO.RelaseDate);
+                    insertCommand.Parameters.AddWithValue("@bookId", id);
 
                     result = insertCommand.ExecuteNonQuery();
 
@@ -171,19 +169,15 @@ namespace ApiSqlCrud.Models
 
         public Response DeleteBook(string commandText, int id)
         {
-            Response response = new Response();
-
-            Connect();
-            SqlCommand insertCommand = new SqlCommand(commandText, mySqlConnection);
-            insertCommand.CommandType = CommandType.StoredProcedure;
-
-            
-            
-
+                Response response = new Response();
                 int result = 0;
 
                 try
                 {
+                    Connect();
+                    SqlCommand insertCommand = new SqlCommand(commandText, mySqlConnection);
+                    insertCommand.CommandType = CommandType.StoredProcedure;
+
                     insertCommand.Parameters.AddWithValue("@bookId", id);
                     result = insertCommand.ExecuteNonQuery();
                 }

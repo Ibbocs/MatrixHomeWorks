@@ -20,34 +20,34 @@ namespace ApiSqlCrud.Controllers
         }
 
         [HttpPost]
-        public Response AddBook([FromQuery] Book book)
+        public Response AddBook([FromQuery] BookDTO bookDTO)
         {
             //bookun icini niye null gonderir ki?
             
             Response response = new Response();
             MyApiCrud myApiCrud = new MyApiCrud();
 
-            response = myApiCrud.AddBook("InsertPro", book);
+            response = myApiCrud.AddBook("InsertPro", bookDTO);
 
 
             return response;
         }
 
         [HttpPut]
-        public Response UpdateBook([FromQuery] Book book)
+        public Response UpdateBook([FromQuery] BookDTO bookDTO, [FromQuery] int id)
         {
             //bookun icini niye null gonderir ki?
             Response response = new Response();
             MyApiCrud myApiCrud = new MyApiCrud();
 
-            response = myApiCrud.UpdateBook("UpdatePro", book);
+            response = myApiCrud.UpdateBook("UpdatePro", bookDTO, id);
 
 
             return response;
         }
 
         [HttpDelete]
-        public Response DeleteBook(int id)
+        public Response DeleteBook([FromQuery]int id)
         {
             //bookun icini niye null gonderir ki?
             Response response = new Response();
