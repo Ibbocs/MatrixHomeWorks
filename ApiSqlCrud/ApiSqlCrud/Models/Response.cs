@@ -8,7 +8,26 @@ namespace ApiSqlCrud.Models
         public string StatusMassage{ get; set; }
         //public Book Book { get; set; }
 
-        public string exception { get { return "All Things Are Good"; } set { } }
+        private string ex = null;
+
+        public string exception
+        {
+            get 
+            {
+                //return exception = ex ?? "All Things Are Good";
+                //if (exception is not null)
+                //{
+                //    return exception;
+                //}
+                //return exception;
+                return ex ?? "All Things Are Good";
+            }
+            set
+            {
+                ex = value;
+            }
+           
+        }
 
         public List<Book> listOfBooks { get; set; }
     }

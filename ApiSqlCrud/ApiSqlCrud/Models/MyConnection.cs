@@ -5,7 +5,7 @@ namespace ApiSqlCrud.Models
 {
     public class MyConnection
     {
-        private readonly string _connectionString = " " /*"Data Source=DESKTOP-PHRL2VS;Initial Catalog=ApiCrud;Integrated Security=True"*/;
+        private readonly string _connectionString = "Data Source=DESKTOP-PHRL2VS;Initial Catalog=ApiCrud;Integrated Security=True";
         public SqlConnection mySqlConnection;
 
         public MyConnection()

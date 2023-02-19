@@ -42,7 +42,7 @@ namespace ApiSqlCrud.Models
                     catch (System.Exception ex)
                     {
 
-                        response.exception = ex.ToString();
+                        response.exception = ex.Message;
                     }
                     finally
                     {
@@ -68,7 +68,7 @@ namespace ApiSqlCrud.Models
             catch (System.Exception ex)
             {
 
-                response.exception = ex.ToString();
+                response.exception = ex.Message;
             }
            
 
@@ -97,7 +97,8 @@ namespace ApiSqlCrud.Models
                 catch (System.Exception ex)
                 {
 
-                    response.exception = ex.ToString();
+                    response.exception = ex.Message;
+                //response.ex = ex.Message;
                 }
                 finally
                 {
@@ -144,7 +145,7 @@ namespace ApiSqlCrud.Models
                 catch (System.Exception ex)
                 {
 
-                    response.exception = ex.ToString();
+                    response.exception = ex.Message;
                 }
                 finally
                 {
@@ -184,7 +185,7 @@ namespace ApiSqlCrud.Models
                 catch (System.Exception ex)
                 {
                     
-                    response.exception = ex.ToString();
+                    response.exception = ex.Message;
                 }
                 finally
                 {
