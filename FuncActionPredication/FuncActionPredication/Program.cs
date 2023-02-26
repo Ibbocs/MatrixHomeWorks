@@ -14,6 +14,8 @@ namespace FuncActionPredication
             //Task3-String list-de icerisinde e- herfi olmayan sozleri cixadan Predicate<> yaradin
 
             //listin reverse methodu nece isledilir? void cevire bilmezsen xetasi aldim
+            //Class library basqa bir proyektde nece isledey?
+
             #region Task1
 
 

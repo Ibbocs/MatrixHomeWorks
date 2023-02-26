@@ -1,6 +1,7 @@
 ﻿using ApiSqlCrud.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
 
 namespace ApiSqlCrud.Controllers
 {
@@ -8,16 +9,29 @@ namespace ApiSqlCrud.Controllers
     [ApiController]
     public class MyBookController : ControllerBase
     {
+        //private IOptions<bookAppsetting> _options;
+        //public MyBookController(IOptions<bookAppsetting> options)
+        //{
+        //    _options = options;
+        //}
+
+
         [HttpGet]
         public Response GetBooks()
         {
-            
+
             MyApiCrud myApiCrud = new MyApiCrud();
             //Response response = new Response();
             Response response = myApiCrud.GetAllBooks("SellectPro");
 
             return response;
         }
+
+        //[HttpGet]
+        //public IOptions<bookAppsetting> GetBook()
+        //{
+        //    return _options;
+        //}
 
         [HttpPost]
         public Response AddBook([FromQuery] BookDTO bookDTO)
