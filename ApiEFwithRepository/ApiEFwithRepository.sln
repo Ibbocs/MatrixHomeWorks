@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33103.184
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileMatrix", "FileMatrix\FileMatrix.csproj", "{00F4E8E7-F64E-48AA-83C6-03CEE644754B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiEFwithRepository", "ApiEFwithRepository\ApiEFwithRepository.csproj", "{B2EE6F77-E47E-4E41-AC2C-3740B5811AE0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{00F4E8E7-F64E-48AA-83C6-03CEE644754B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{00F4E8E7-F64E-48AA-83C6-03CEE644754B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{00F4E8E7-F64E-48AA-83C6-03CEE644754B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{00F4E8E7-F64E-48AA-83C6-03CEE644754B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2EE6F77-E47E-4E41-AC2C-3740B5811AE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2EE6F77-E47E-4E41-AC2C-3740B5811AE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2EE6F77-E47E-4E41-AC2C-3740B5811AE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2EE6F77-E47E-4E41-AC2C-3740B5811AE0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {1EDC7E53-2B66-4B15-B1A4-9CD65303F7AE}
+		SolutionGuid = {B154EA76-84AF-49BE-8898-67F6267653A2}
 	EndGlobalSection
 EndGlobal

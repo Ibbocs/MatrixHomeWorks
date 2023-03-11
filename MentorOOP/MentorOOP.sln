@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33103.184
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileOperation2", "FileOperation2\FileOperation2.csproj", "{3C6F134B-A8DF-45F7-8A1D-FF274FD8DCF4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MentorOOP", "MentorOOP\MentorOOP.csproj", "{496EDCA3-612B-4FE6-AC71-2851CC14D98B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3C6F134B-A8DF-45F7-8A1D-FF274FD8DCF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3C6F134B-A8DF-45F7-8A1D-FF274FD8DCF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3C6F134B-A8DF-45F7-8A1D-FF274FD8DCF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3C6F134B-A8DF-45F7-8A1D-FF274FD8DCF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{496EDCA3-612B-4FE6-AC71-2851CC14D98B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{496EDCA3-612B-4FE6-AC71-2851CC14D98B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{496EDCA3-612B-4FE6-AC71-2851CC14D98B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{496EDCA3-612B-4FE6-AC71-2851CC14D98B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {EB23BCD6-2E83-4A85-B407-71C8E5EB097D}
+		SolutionGuid = {B0F5D0E6-22F9-4CE3-804E-0B39128E9F10}
 	EndGlobalSection
 EndGlobal

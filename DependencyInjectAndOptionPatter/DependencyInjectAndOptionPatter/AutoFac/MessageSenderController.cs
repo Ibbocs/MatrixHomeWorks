@@ -8,9 +8,11 @@ namespace DependencyInjectAndOptionPatter.AutoFac
     public class MessageSenderController : ControllerBase
     {
         private IMessageService message;
+        private GreetingService GreetingService;
         public MessageSenderController(IMessageService _message) 
-        { 
-            message= _message;
+        {
+            message = _message;
+            GreetingService = new GreetingService();
         }
 
         [HttpGet]
