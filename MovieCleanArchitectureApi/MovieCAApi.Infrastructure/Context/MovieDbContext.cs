@@ -1,0 +1,39 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using MovieCAApi.Domain.Entity;
+
+namespace MovieCAApi.Infrastructure.Context
+{
+    public class MovieDbContext : DbContext
+    {
+        public MovieDbContext(DbContextOptions<MovieDbContext> options) : base(options)
+        {
+
+        }
+
+        public DbSet<Movie> Movies { get; set; }
+        public DbSet<Actor> Actors { get; set; }
+        public DbSet<MovieActor> MovieActors { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<MovieActor>().HasKey(s => new { s.MovieId, s.ActorId, s.MovieActorID });
+
+            modelBuilder.Entity<MovieActor>()
+                .HasOne<Movie>(ma => ma.Movie)
+                .WithMany(m => m.MovieActor)
+                .HasForeignKey(ma => ma.MovieId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<MovieActor>()
+                .HasOne<Actor>(ma => ma.Actor)
+                .WithMany(a => a.MovieActor)
+                .HasForeignKey(ma => ma.ActorId)
+                .OnDelete(DeleteBehavior.Restrict);
+        }
+    }
+}

@@ -24,7 +24,7 @@ namespace EFwithAutoMapperAndLinQ.Domain
         public IQueryable GetAllPost()
         {
             //bele bir istifade ne ucundu??
-            //using (var ctx = new BlogDbConText())
+            //using (var ctx = new BlogDbConText())B
             //{
 
             //}

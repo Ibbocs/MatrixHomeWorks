@@ -19,6 +19,7 @@ namespace MentorOOP.Task2
             holderName= _name;
             
             myVar= _accountNumber;
+
             try
             {
                 if (_balance<1)

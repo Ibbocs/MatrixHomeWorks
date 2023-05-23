@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace MentorOOP.Task4
 {
-    internal interface ITypeBook
+    public interface ITypeBook
     {
-        List<string[]> Books { get; }
-        List<string[]> BookType { get; }
+        public string Name { get; set; }
     }
 }

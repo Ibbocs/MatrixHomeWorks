@@ -1,0 +1,70 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33103.184
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieCleanArchitectureApi", "MovieCleanArchitectureApi\MovieCleanArchitectureApi.csproj", "{DE6B25F7-3B21-450E-8D0E-8E5198116CFA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scr", "scr", "{AC97C070-B328-43FD-AC28-B875B3914407}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{35FFED7B-51BC-4F68-842D-D686F8BBE119}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "External", "External", "{6860D0CE-FF13-4B1C-BFBC-23748151F3C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieCAApi.Domain", "MovieCAApi.Domain\MovieCAApi.Domain.csproj", "{E641D119-7B1E-42F9-9804-E95100E10873}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieCAApi.Application", "MovieCAApi.Application\MovieCAApi.Application.csproj", "{C0AD5050-B23A-4BC6-9F54-F0ED7E6E21EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieCAApi.Infrastructure", "MovieCAApi.Infrastructure\MovieCAApi.Infrastructure.csproj", "{9A36115C-8AC9-464F-AD83-9166EEAE1C43}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieCAApi.Presentation", "MovieCAApi.Presentation\MovieCAApi.Presentation.csproj", "{35985D08-0E5A-4FAA-8263-C5F93543719C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieCAApi.Percistance", "MovieCAApi.Percistance\MovieCAApi.Percistance.csproj", "{8E6EE9C4-F959-4EA4-8D80-44039B66FBDF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DE6B25F7-3B21-450E-8D0E-8E5198116CFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE6B25F7-3B21-450E-8D0E-8E5198116CFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE6B25F7-3B21-450E-8D0E-8E5198116CFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE6B25F7-3B21-450E-8D0E-8E5198116CFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E641D119-7B1E-42F9-9804-E95100E10873}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E641D119-7B1E-42F9-9804-E95100E10873}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E641D119-7B1E-42F9-9804-E95100E10873}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E641D119-7B1E-42F9-9804-E95100E10873}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0AD5050-B23A-4BC6-9F54-F0ED7E6E21EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0AD5050-B23A-4BC6-9F54-F0ED7E6E21EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0AD5050-B23A-4BC6-9F54-F0ED7E6E21EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0AD5050-B23A-4BC6-9F54-F0ED7E6E21EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A36115C-8AC9-464F-AD83-9166EEAE1C43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A36115C-8AC9-464F-AD83-9166EEAE1C43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A36115C-8AC9-464F-AD83-9166EEAE1C43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A36115C-8AC9-464F-AD83-9166EEAE1C43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35985D08-0E5A-4FAA-8263-C5F93543719C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35985D08-0E5A-4FAA-8263-C5F93543719C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35985D08-0E5A-4FAA-8263-C5F93543719C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35985D08-0E5A-4FAA-8263-C5F93543719C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E6EE9C4-F959-4EA4-8D80-44039B66FBDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E6EE9C4-F959-4EA4-8D80-44039B66FBDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E6EE9C4-F959-4EA4-8D80-44039B66FBDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E6EE9C4-F959-4EA4-8D80-44039B66FBDF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{35FFED7B-51BC-4F68-842D-D686F8BBE119} = {AC97C070-B328-43FD-AC28-B875B3914407}
+		{6860D0CE-FF13-4B1C-BFBC-23748151F3C0} = {AC97C070-B328-43FD-AC28-B875B3914407}
+		{E641D119-7B1E-42F9-9804-E95100E10873} = {35FFED7B-51BC-4F68-842D-D686F8BBE119}
+		{C0AD5050-B23A-4BC6-9F54-F0ED7E6E21EC} = {35FFED7B-51BC-4F68-842D-D686F8BBE119}
+		{9A36115C-8AC9-464F-AD83-9166EEAE1C43} = {6860D0CE-FF13-4B1C-BFBC-23748151F3C0}
+		{35985D08-0E5A-4FAA-8263-C5F93543719C} = {6860D0CE-FF13-4B1C-BFBC-23748151F3C0}
+		{8E6EE9C4-F959-4EA4-8D80-44039B66FBDF} = {6860D0CE-FF13-4B1C-BFBC-23748151F3C0}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {54D99958-633A-4164-8644-237A220F7ACD}
+	EndGlobalSection
+EndGlobal
